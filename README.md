@@ -10,7 +10,7 @@ Set up a `.env` with:
 - `CONFIG_LOCATION` (directory)
 - `LOG_LOCATION`
 
-I've been using a folder that will be used by this app and the `cron-watcher`
+I've been using a folder that will be used by this app and the `charge-lnd-cron`
 
 Start the app:
 ```
