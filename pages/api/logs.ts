@@ -5,6 +5,7 @@ export default function handler(req, res) {
         case 'GET':
             try {
                 const logs = FileManager.readFile(LOG_LOCATION);
+                console.log(logs);
                 res.status(200).json({ logs });
             } catch (err) {
                 console.log(err);
