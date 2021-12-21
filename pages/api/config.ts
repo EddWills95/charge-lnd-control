@@ -5,19 +5,18 @@ export default function handler(req, res) {
     switch (req.method) {
         case 'GET':
             try {
-                const configs = FileManager.readConfigFiles();
-                res.status(200).json(JSON.stringify({ configs }));
+                const config = FileManager.readFile(CONFIG_LOCATION);
+                res.status(200).json(JSON.stringify({ config }));
             } catch (err) {
                 console.log(err);
                 res.status(500).json('Error reading config folder');
             }
             break;
         case 'POST':
-            console.log(req.body);
-            const { config, name } = JSON.parse(req.body);
+            const { config } = JSON.parse(req.body);
 
             try {
-                FileManager.writeFile(path.join(CONFIG_LOCATION, name), config);
+                FileManager.writeFile(path.join(CONFIG_LOCATION), config);
                 res.status(200).json();
             } catch (err) {
                 console.log(err);

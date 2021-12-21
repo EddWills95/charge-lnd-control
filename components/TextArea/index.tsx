@@ -21,7 +21,7 @@ const TextArea = ({
     ...props
 }: Props) => {
     return (
-        <div className={`flex flex-col mb-4 w-64 ${additionalClasses}`}>
+        <div className={`flex flex-col items-center mb-4 w-full`}>
             {label && <label>{label}</label>}
             <textarea
                 {...props}

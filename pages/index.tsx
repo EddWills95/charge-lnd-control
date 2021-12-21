@@ -41,15 +41,15 @@ export async function getStaticProps(context) {
     const cronRes = await fetch(`http://localhost:3000/api/cron`);
     const configRes = await fetch(`http://localhost:3000/api/config`);
     const { cron } = await cronRes.json();
-    const { configs } = await configRes.json();
+    const { config } = await configRes.json();
 
-    if (!cron && !configs) {
+    if (!cron && !config) {
         return {
             notFound: true
         };
     }
 
     return {
-        props: { data: { configs, cron } } // will be passed to the page component as props
+        props: { data: { config, cron } } // will be passed to the page component as props
     };
 }
