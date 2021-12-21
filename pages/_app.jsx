@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
 
             <ToastContainer />
 
-            <header className="flex justify-evenly w-10/12 p-4">
+            <header className="flex justify-evenly w-screen p-4 sm:w-10/12">
                 <Heading
                     type={ComponentTypes.HeadingType.medium}
                     additionalClasses="hover:underline"

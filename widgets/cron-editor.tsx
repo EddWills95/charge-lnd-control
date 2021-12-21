@@ -38,7 +38,7 @@ const CronEditor = ({ cronData, setCronData }: Props) => {
 
             <p className="text-center italic">{readableCron}</p>
 
-            <div className="flex">
+            <div className="flex flex-wrap justify-center">
                 <Button
                     type={ComponentTypes.ButtonType.secondary}
                     onClick={() => setCronData(QUICK_CRONS.MINUTE)}
