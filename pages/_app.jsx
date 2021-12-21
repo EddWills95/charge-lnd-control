@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <div className="flex flex-col items-center bg-gradient-to-br from-blue-700 via-blue-800 to-gray-900 h-screen">
             <Head>
-                <title>Create Next App</title>
+                <title>⚡️charge lnd control⚡️</title>
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -30,16 +30,16 @@ function MyApp({ Component, pageProps }) {
             <header className="flex justify-evenly w-screen p-4 sm:w-10/12">
                 <Heading
                     type={ComponentTypes.HeadingType.medium}
-                    additionalClasses="hover:underline"
+                    additionalClasses="hover:underline flex flex-col justify-center "
                 >
                     <Link href="/">Home</Link>
                 </Heading>
                 <Heading type={ComponentTypes.HeadingType.extraLarge}>
-                    <em>charge-lnd</em>⚡️ store🔋
+                    <em>charge-lnd</em>⚡️control
                 </Heading>
                 <Heading
                     type={ComponentTypes.HeadingType.medium}
-                    additionalClasses="hover:underline"
+                    additionalClasses="hover:underline flex flex-col justify-center "
                 >
                     <Link href="/logs">Logs</Link>
                 </Heading>

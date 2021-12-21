@@ -4,6 +4,11 @@ type Props = {
     value: string;
     onChange: (any) => void;
     additionalClasses?: string;
+    spellCheck?: boolean;
+};
+
+const defaultProps = {
+    spellCheck: true
 };
 
 const TextArea = ({
@@ -11,13 +16,17 @@ const TextArea = ({
     placeholder,
     value,
     onChange,
-    additionalClasses
+    additionalClasses,
+    spellCheck,
+    ...props
 }: Props) => {
     return (
-        <div className="flex flex-col mb-4 w-64">
+        <div className={`flex flex-col mb-4 w-64 ${additionalClasses}`}>
             {label && <label>{label}</label>}
             <textarea
-                className={`text-black p-3 placeholder-blueGray-300 text-blueGray-600 relative rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full ${additionalClasses}`}
+                {...props}
+                spellCheck={spellCheck}
+                className={`text-black p-3 placeholder-blueGray-300 text-blueGray-600 relative rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring ${additionalClasses}`}
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}
@@ -25,5 +34,7 @@ const TextArea = ({
         </div>
     );
 };
+
+TextArea.defaultProps = defaultProps;
 
 export default TextArea;

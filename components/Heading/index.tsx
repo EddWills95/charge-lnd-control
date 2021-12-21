@@ -21,7 +21,7 @@ type Props = {
 const Heading = ({ children, type, additionalClasses }: Props) => {
     let HeadingComponent: any;
     let headingClasses: string;
-    headingClasses = 'align-middle ';
+    headingClasses = '';
 
     if (type === HeadingType.small) {
         HeadingComponent = 'h4';
